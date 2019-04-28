@@ -1,0 +1,139 @@
+.game{
+	height:100%;
+	display: flex;
+}
+
+.game_bar{
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	border-right: 1px solid red;
+}
+
+.game_bar_header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	box-sizing: border-box;
+	background: blue;
+	color: #fff;
+}
+
+.tips{
+	padding: 0 20px;
+	background: orange;
+}
+
+.tips_header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+}
+
+.tips_items{
+	display: flex;
+	padding: 0 20px;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+}
+
+.tips_item{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 30px;
+	background: red;
+	border-radius: 10px;
+	font-size: 11px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.bar_levels{
+	background: green;
+	flex: 1;
+}
+
+.bar_levels_title{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	border-bottom: 1px solid #fff;
+}
+
+.bar_level{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 35px; 
+	border-bottom:1px solid #fff;
+	cursor: pointer;
+}
+
+.bar_level_fire{
+	color: red;
+}
+
+.bar_level_active{
+	background: orange;
+}
+
+.game_content_wrapper{
+	flex:1;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #477351;
+}
+
+.game_content_question{
+	padding: 30px;
+	border: 1px solid #fff;
+	border-radius: 20px;
+	text-align: center;
+	background: #7a842d;
+}
+
+.game_content_answers{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 10px;
+}
+
+.game_content_answer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 45%;
+	margin: 5px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	cursor: pointer;
+	background: #71714a;
+}
+
+.answer_choose{
+	background: yellow;
+}
+
+.answer_right{
+	background: green;
+}
+
+.answer_false{
+	background: red;
+}
+
+
+.game_content_answer:hover {
+	background: green;
+}
+
