@@ -1,94 +1,149 @@
 .game{
+	display: flex;
+	flex-direction: column;
 	height:100%;
+	background: #000;
+}
+
+.game_main{
 	display: flex;
 }
 
-.game_bar{
+.game_main_bg{
+	flex: 1;
+	background: url(./img/bg.jpg) no-repeat center;
+	background-size: 40%;
+}
+
+.bar{
 	display: flex;
 	flex-direction: column;
 	width: 300px;
-	border-right: 1px solid red;
-}
-
-.game_bar_header{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 50px;
-	box-sizing: border-box;
-	background: blue;
-	color: #fff;
 }
 
 .tips{
 	padding: 0 20px;
-	background: orange;
-}
-
-.tips_header{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 30px;
 }
 
 .tips_items{
 	display: flex;
-	padding: 0 20px;
 	justify-content: space-between;
 	align-items: center;
-	height: 50px;
+	padding: 0 20px;
 }
 
 .tips_item{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 50px;
-	height: 30px;
-	background: red;
+	width: 70px;
+	height: 70px;
 	border-radius: 10px;
 	font-size: 11px;
 	color: #fff;
 	cursor: pointer;
 }
 
-.bar_levels{
-	background: green;
-	flex: 1;
+.tips_item_50{
+	background: url(./img/50.jpg) no-repeat center;
+	background-size: 70%;
 }
 
-.bar_levels_title{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 50px;
-	border-bottom: 1px solid #fff;
+.tips_item_audi{
+	background: url(./img/audi.jpg) no-repeat center;
+	background-size: 70%;
+}
+
+.tips_item_call{
+	background: url(./img/phone.jpg) no-repeat center;
+	background-size: 70%;
+}
+
+.bar_levels{
+	flex: 1;
 }
 
 .bar_level{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 35px; 
-	border-bottom:1px solid #fff;
+	height: 25px; 
+	font-size: 15px;
 	cursor: pointer;
+	color: #D1A46B;
 }
 
 .bar_level_fire{
-	color: red;
+	color: #fff;
 }
 
 .bar_level_active{
-	background: orange;
+	color: #000;
+	font-weight: bold;
+	
 }
 
-.game_content_wrapper{
+.bar_level_active .bar_level_number {
+	color: #fff;
+}
+
+.bar_level_active .bar_level_content{
+	background: #E19F2E;
+}
+
+.bar_level_content{
+	position: relative;
+	display: flex;
+	width: 167px;
+}
+
+.bar_level_active .bar_level_content:after {
+	content: '';
+    position: absolute;
+    left: -15px;
+    top: 0px;
+    border-top: 10px solid #000;
+    border-right: 15px solid #E19F2E;
+}
+
+.bar_level_active .bar_level_amount:after {
+	content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-top: 10px solid #000;
+    border-left: 15px solid #E19F2E;
+}
+
+.bar_level_active .bar_level_amount:before {
+	content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-bottom: 10px solid #000;
+    border-left: 15px solid #E19F2E;
+}
+
+.bar_level_active .bar_level_content:before {
+	content: '';
+    position: absolute;
+    left: -15px;
+    bottom: 0px;
+    border-bottom: 10px solid #000;
+    border-right: 15px solid #E19F2E;
+}
+
+.bar_level_number{
+	text-align: right;
+	width: 20px;
+	margin-right: 30px;
+}
+
+.game_footer{
 	flex:1;
 	display: flex;
     justify-content: center;
     align-items: center;
-    background: #477351;
 }
 
 .game_content_question{
@@ -96,7 +151,7 @@
 	border: 1px solid #fff;
 	border-radius: 20px;
 	text-align: center;
-	background: #7a842d;
+	background: #2A06CE;
 }
 
 .game_content_answers{
@@ -117,7 +172,7 @@
 	border: 1px solid #fff;
 	border-radius: 10px;
 	cursor: pointer;
-	background: #71714a;
+	background: #2A06CE;
 }
 
 .answer_choose{

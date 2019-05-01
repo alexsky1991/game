@@ -10,7 +10,7 @@ const amounts = require("./amounts.json");
 export default class GamePage extends React.Component {
 
 	state = {
-		pos: 0,
+		pos: 1,
 		reject: false,
 		time: '',
 		right: false,
@@ -74,43 +74,42 @@ export default class GamePage extends React.Component {
 
 		return (
 			<div className="game">
-				<div className="game_bar bar">
-					<Link to="/">назад</Link>
-					<div className="game_bar_header">
-						<div className="game_bar_header_content">
-							Ситуация
+				<div className="game_main">
+					<div className="bar">
+						<div className="tips">
+							<div className="tips_items">
+								<div className="tips_item tips_item_50"></div>
+								<div className="tips_item tips_item_audi"></div>
+								<div className="tips_item tips_item_call"></div>
+							</div>
 						</div>
+						<div className="bar_levels">
+							<div className="bar_levels_content">
+								{amounts.map(el => {
+									let className = "bar_level "
+
+									if(el.fire)
+										className += ' bar_level_fire'
+
+									if(el.id == pos)
+										className += ' bar_level_active'
+
+									return <div key={el.id} className={className}>
+												<div className="bar_level_content">
+													<div className="bar_level_number">{el.id}</div>
+													<div className="bar_level_amount">
+														{el.amount}
+													</div>
+												</div>
+											</div>
+								})}
+							</div>
+						</div>			
 					</div>
-					<div className="game_bar_tips tips">
-						<div className="tips_header">
-							Подсказки
-						</div>
-						<div className="tips_items">
-							<div className="tips_item">50/50</div>
-							<div className="tips_item">звонок</div>
-							<div className="tips_item">зал</div>
-						</div>
-					</div>
-					<div className="bar_levels">
-						<div className="bar_levels_title">
-		    				Прохождение
-						</div>
-						<div className="bar_levels_content">
-							{amounts.map(el => {
-								let className = "bar_level "
-
-								if(el.fire)
-									className += ' bar_level_fire'
-
-								if(el.id == pos)
-									className += ' bar_level_active'
-
-								return <div key={el.id} className={className}>{el.amount}</div>
-							})}
-						</div>
-					</div>			
+					<div className="game_main_bg"></div>
 				</div>
-				<div className="game_content_wrapper">
+				
+				<div className="game_footer">
 					<div className="game_content">
 						<div className="game_content_question">{item.question}</div>
 						<div className="game_content_answers" onClick={this.clickItem}>
@@ -121,7 +120,6 @@ export default class GamePage extends React.Component {
 								if(time == el) {
 									className += " answer_choose"
 
-									console.log(time == item.right)
 									if(time == item.right) {
 										setTimeout(() => {
 											this.right(el)
@@ -147,7 +145,6 @@ export default class GamePage extends React.Component {
 
 								if(noright) {
 									if(el == item.right) {
-										console.log(1)
 										className += " answer_right";
 
 										setTimeout(this.lose
@@ -166,6 +163,7 @@ export default class GamePage extends React.Component {
 					</div>
 				</div>
 			</div>
+			
 		)
 	}
 }

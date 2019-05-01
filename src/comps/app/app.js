@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FirstPage,
+import {
 		GamePage
  } from '../pages';
 
@@ -12,8 +12,8 @@ const App = () => {
 	return (
 		<div className="wrapper font">
 			<Router>
-				<Route path="/" component={FirstPage} exact/>
-				<Route path="/game" component={GamePage}/>
+				{/*<Route path="/" component={FirstPage} exact/>*/}
+				<Route path="/" component={GamePage}/>
 			</Router>
 		</div>
 		

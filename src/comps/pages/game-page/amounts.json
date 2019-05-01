@@ -1,15 +1,40 @@
 [
 	{
-		"amount": 20000,
+		"amount": 1000000,
+		"fire": true,
+		"id": 15
+	},
+	{
+		"amount": 500000,
+		"id": 14
+	},
+	{
+		"amount": 250000,
+		"id": 13
+	},
+	{
+		"amount": 125000,
+		"id": 12
+	},
+	{
+		"amount": 64000,
+		"id": 11
+	},
+	{
+		"amount": 32000,
+		"fire": true,
+		"id": 10
+	},
+	{
+		"amount": 16000,
 		"id": 9
 	},
 	{
-		"amount": 10000,
+		"amount": 8000,
 		"id": 8
 	},
 	{
-		"amount": 5000,
-		"fire": true,
+		"amount": 4000,
 		"id": 7
 	},
 	{
@@ -26,19 +51,15 @@
 		"id": 4
 	},
 	{
-		"amount": 400,
+		"amount": 300,
 		"id": 3
 	},
 	{
-		"amount": 300,
+		"amount": 200,
 		"id": 2
 	},
 	{
-		"amount": 200,
-		"id": 1
-	},
-	{
 		"amount": 100,
-		"id": 0
+		"id": 1
 	}
 ]
