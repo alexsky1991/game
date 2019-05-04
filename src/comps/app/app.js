@@ -1,8 +1,6 @@
 import React from 'react';
 
-import {
-		GamePage
- } from '../pages';
+import {GamePage} from '../pages';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
@@ -16,7 +14,6 @@ const App = () => {
 				<Route path="/" component={GamePage}/>
 			</Router>
 		</div>
-		
 	)
 }
 

@@ -12,131 +12,6 @@
 .game_main_bg{
 	flex: 1;
 	background: url(./img/bg.jpg) no-repeat center;
-	background-size: 40%;
-}
-
-.bar{
-	display: flex;
-	flex-direction: column;
-	width: 300px;
-}
-
-.tips{
-	padding: 0 20px;
-}
-
-.tips_items{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 20px;
-}
-
-.tips_item{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 70px;
-	height: 70px;
-	border-radius: 10px;
-	font-size: 11px;
-	color: #fff;
-	cursor: pointer;
-}
-
-.tips_item_50{
-	background: url(./img/50.jpg) no-repeat center;
-	background-size: 70%;
-}
-
-.tips_item_audi{
-	background: url(./img/audi.jpg) no-repeat center;
-	background-size: 70%;
-}
-
-.tips_item_call{
-	background: url(./img/phone.jpg) no-repeat center;
-	background-size: 70%;
-}
-
-.bar_levels{
-	flex: 1;
-}
-
-.bar_level{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 25px; 
-	font-size: 15px;
-	cursor: pointer;
-	color: #D1A46B;
-}
-
-.bar_level_fire{
-	color: #fff;
-}
-
-.bar_level_active{
-	color: #000;
-	font-weight: bold;
-	
-}
-
-.bar_level_active .bar_level_number {
-	color: #fff;
-}
-
-.bar_level_active .bar_level_content{
-	background: #E19F2E;
-}
-
-.bar_level_content{
-	position: relative;
-	display: flex;
-	width: 167px;
-}
-
-.bar_level_active .bar_level_content:after {
-	content: '';
-    position: absolute;
-    left: -15px;
-    top: 0px;
-    border-top: 10px solid #000;
-    border-right: 15px solid #E19F2E;
-}
-
-.bar_level_active .bar_level_amount:after {
-	content: '';
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    border-top: 10px solid #000;
-    border-left: 15px solid #E19F2E;
-}
-
-.bar_level_active .bar_level_amount:before {
-	content: '';
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    border-bottom: 10px solid #000;
-    border-left: 15px solid #E19F2E;
-}
-
-.bar_level_active .bar_level_content:before {
-	content: '';
-    position: absolute;
-    left: -15px;
-    bottom: 0px;
-    border-bottom: 10px solid #000;
-    border-right: 15px solid #E19F2E;
-}
-
-.bar_level_number{
-	text-align: right;
-	width: 20px;
-	margin-right: 30px;
 }
 
 .game_footer{
@@ -186,7 +61,6 @@
 .answer_false{
 	background: red;
 }
-
 
 .game_content_answer:hover {
 	background: green;
