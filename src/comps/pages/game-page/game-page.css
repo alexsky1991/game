@@ -7,6 +7,7 @@
 
 .game_main{
 	display: flex;
+	position: relative;
 }
 
 .game_main_bg{

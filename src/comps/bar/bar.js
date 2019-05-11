@@ -1,6 +1,9 @@
 import React from 'react';
+import Tips from '../tips'
 
 import './bar.css';
+
+import { Consumer } from '../context'
 
 const amounts = require("./amounts.json");
 
@@ -13,11 +16,11 @@ export default class Bar extends React.Component {
 
 		return (
 			<div className="bar">
-				<div className="tips">
-					<div className="tips_item tips_item_50"></div>
-					<div className="tips_item tips_item_audi"></div>
-					<div className="tips_item tips_item_call"></div>
-				</div>
+			
+				<Consumer>
+					{callTip50 => <Tips callTip50={callTip50}/>}
+				</Consumer>
+				
 				<div className="bar_levels">
 					{amounts.map(el => {
 						let className = "bar_level "

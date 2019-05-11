@@ -3,7 +3,7 @@ import React from 'react';
 import {GamePage} from '../pages';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-
+ 
 import './app.css';
 
 const App = () => {
